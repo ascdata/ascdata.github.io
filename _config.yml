@@ -21,7 +21,7 @@ navigation:                # accepts {file, title, url, icon, sidebaricon}
   
 
 external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
-  - {title: Github, icon: square-github, url: "https://github.com/ascdata"}
+  - {title: Github, icon: github, url: "https://github.com/ascdata"}
   # - {title: Mail, icon: envelope, url: "mailto:niklasbuschmann@users.noreply.github.com"}
   # - {title: Subscribe, icon: rss, url: "/feed.xml"}
 
