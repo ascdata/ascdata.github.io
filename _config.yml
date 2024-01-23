@@ -1,4 +1,4 @@
-title: "ascdatalab"
+title: "ascdata.dev"
 author: "ascdata"
 description: "Passionate Technologist with a keen focus on Data Engineering and Visualization"
 permalink: /:title/
@@ -18,11 +18,9 @@ minimal: false             # use a dark header
 navigation:                # accepts {file, title, url, icon, sidebaricon}
   - {title: About, icon: address-card, file: "about.md"}
   - {title: Blog, icon: book, file: "index.html"}
-  
-  
+  - {title: Github, icon: github, url: "https://github.com/ascdata"}
 
 external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
-  - {title: Github, icon: github, url: "https://github.com/ascdata"}
   # - {title: Mail, icon: envelope, url: "mailto:niklasbuschmann@users.noreply.github.com"}
   # - {title: Subscribe, icon: rss, url: "/feed.xml"}
 
