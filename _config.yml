@@ -1,6 +1,6 @@
 title: "ascdata.dev"
 author: "ascdata"
-description: "Passionate Technologist with a keen focus on Data Engineering and Visualization"
+description: "Passionate technologist with a keen focus on data engineering and visualization"
 permalink: /:title/
 lang: "en"
 excerpt_separator: "\n\n\n"
@@ -8,9 +8,9 @@ date_format: "%B %d, %Y"
 
 # Layout
 
-show_excerpts: false        # show article excerpts on the home page
+show_excerpts: false       # show article excerpts on the home page
 show_frame: true           # adds a gray frame to the site
-show_sidebar: true       # show a sidebar instead of the usual header
+show_sidebar: true         # show a sidebar instead of the usual header
 minimal: false             # use a dark header
 
 # Menu
@@ -19,6 +19,7 @@ navigation:                # accepts {file, title, url, icon, sidebaricon}
   - {title: About, icon: address-card, file: "about.md"}
   - {title: Blog, icon: book, file: "index.html"}
   - {title: Github, icon: github, url: "https://github.com/ascdata"}
+  - {title: LinkedIn, icon: linkedin, url: "https://www.linkedin.com/in/alexander-schaudin-63a351270/"}
 
 external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
   # - {title: Mail, icon: envelope, url: "mailto:niklasbuschmann@users.noreply.github.com"}
