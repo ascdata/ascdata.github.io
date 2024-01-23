@@ -1,11 +1,9 @@
 ---
-layout: default
+layout: page
 title: "About me"
 ---
 
-<div class="sidebar">
-  <img src="https://avatars.githubusercontent.com/u/107685588?v=4" alt="LinkedIn Profile Image" style="max-width: 200px; border: 1px solid #ddd; border-radius: 8px;">
-</div>
+<img src="https://github.com/ascdata/ascdata.github.io/raw/master/assets/pictures/landscape_sun.JPG" alt="Sonnenuntergang" width="500"/>
 
 ## About me
 I am a data enthusiast, who uses data warehouse, ETL and database technologies to visualize data from different sources. I am also interested in using modern cloud data engineering tools to extract valuable insights on complex datasets and automate things to make my daily work easier.
@@ -20,4 +18,5 @@ Here are some books that inspire me:
 - [Robert T. Kiyosaki - Rich Dad, Poor Dad](https://www.goodreads.com/book/show/69571.Rich_Dad_Poor_Dad?from_search=true&from_srp=true&qid=cWknLveC4t&rank=1)
 - [Alex Giesecke, Nico Schork - Kein Limit](https://www.goodreads.com/book/show/35300186-kein-limit?ref=nav_sb_ss_1_10)
 - [Flavio Simonetti - All in](https://www.goodreads.com/book/show/44140863-all-in?ref=nav_sb_ss_1_16)
+- [John Sonmez - Soft Skills: The software developer's life manual](https://www.abebooks.de/9781617292392/Soft-Skills-software-developers-life-1617292397/plp)
 - [Brian Tracy - Eat That Frog!](https://www.goodreads.com/book/show/32471928-eat-that-frog-action-workbook?ref=nav_sb_ss_2_13)
