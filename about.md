@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Alexander Schaudin"
+title: "About me"
 ---
 
 <div class="sidebar">
