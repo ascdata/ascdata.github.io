@@ -1,6 +1,7 @@
 ---
+title: "About"
+permalink: "/about/"
 layout: page
-title: "About me"
 ---
 
 <img src="https://github.com/ascdata/ascdata.github.io/raw/master/assets/pictures/landscape_sun.JPG" alt="Sonnenuntergang" width="500"/>
