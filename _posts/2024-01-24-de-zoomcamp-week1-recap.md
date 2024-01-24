@@ -16,7 +16,7 @@ The Data Engineering Zoomcamp is a practical, self-paced course offered by [Data
   ![Architecture](https://raw.githubusercontent.com/ascdata/ascdata.github.io/master/_posts/media/course-architecture.jpg)
 
 ## Initial setup with GCP and Docker
-After setting up a GCP instance with Debian as the operating system, I initially installed the Python distribution Anaconda, which incidentally includes Jupyter Notebook. In the next step, I installed Docker and Docker-Compose, and concurrently deployed the Postgres database system and pgadmin in two containers. It is important to note at this point that both containers are in the same Docker network.
+After setting up a GCP instance with Debian as the operating system, I initially installed the Python distribution Anaconda, which incidentally includes Jupyter Notebook. In the next step, I installed Docker and Docker-Compose, and concurrently deployed the Postgres database system and pgadmin in two containers (with docker-compose). It is important to note at this point that both containers are in the same Docker network.
 
 ```
 docker network create pg-network
@@ -130,7 +130,18 @@ if __name__ == '__main__':
 In the next step I dockerized the script.
 
 ```
-docker build -t taxi_ingest:v001 .
+URL="https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2021-01.csv.gz"
+
+docker run -it \
+  --network=pg-network \
+  taxi_ingest:v001 \
+    --user=root \
+    --password=root \
+    --host=pg-database \
+    --port=5432 \
+    --db=ny_taxi \
+    --table_name=yellow_taxi_trips \
+    --url=${URL}
 ```
 
 ## Terraform
