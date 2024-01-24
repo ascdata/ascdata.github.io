@@ -12,7 +12,7 @@ I am a data enthusiast, who uses data warehouse, ETL and database technologies t
 I am passionate about technology, data, coding and complex problem solving. This has led me from IT infrastructure (bachelor professional) to data engineering (2+ years). I love python, databases, containerization and everything that’s beautifully engineered.
 
 ## On a personal note
-When I'm not working, I usually spend my time with my little son and wife, exercise, playing and recording my guitars, reading books and some video gaming.
+When I'm not working, I typically spend my time with my little son and wife, exercising, playing and recording my guitars, reading books and some video gaming.
 
 Here are some books that inspire me:
 - [Dale Carnegie - How to Win Friends and Influence People](https://www.goodreads.com/book/show/4865.How_to_Win_Friends_and_Influence_People)
