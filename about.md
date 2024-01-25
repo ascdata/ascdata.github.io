@@ -7,7 +7,7 @@ layout: page
 <img src="https://github.com/ascdata/ascdata.github.io/raw/master/assets/pictures/landscape_sun.JPG" alt="Sonnenuntergang" width="500"/>
 
 ## About me
-I am a data enthusiast, who uses data warehouse, ETL and database technologies to visualize data from different sources. I am also interested in using modern cloud data engineering tools to extract valuable insights on complex datasets and automate things to make my daily work easier.
+I am a data enthusiast who utilizes data warehouse, ETL, and database technologies to visualize data from various sources. I am also interested in using modern cloud data engineering tools to extract valuable insights on complex datasets and automate things to make my daily work easier.
 
 I am passionate about technology, data, coding and complex problem solving. This has led me from IT infrastructure (bachelor professional, 4+ years) to data engineering (2+ years). I love python, databases, containerization and everything that’s beautifully engineered.
 
