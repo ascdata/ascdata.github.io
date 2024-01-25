@@ -13,6 +13,15 @@ The Data Engineering Zoomcamp is a practical, self-paced course offered by [Data
 - Development (Python, Jupyter Notebook)
 - Infrastructure as Code (Terraform)
 
+The complete course will also treat the following tools:
+- [Docker](https://www.docker.com/) is a platform to automate the deployment of applications within lightweight, portable containers
+- [PostgreSQL](https://www.postgresql.org/) is an open-source relational database management system
+- [Mage](https://www.mage.ai/) is a data pipeline tool for transforming and integrating data
+- [Google BigQuery](https://cloud.google.com/bigquery/) is serverless data warehouse
+- [dbt](https://discover.getdbt.com/free-account/) is a tool that focuses on transforming and modeling data within a data warehouse
+- [Apache Spark](https://spark.apache.org/) is a analytics engine for large-scale data processing
+- [Apache Kafka](https://kafka.apache.org/) is an event streaming platform designed for high-throughput, fault-tolerant, and scalable data streaming
+
   ![Architecture](https://raw.githubusercontent.com/ascdata/ascdata.github.io/master/_posts/media/course-architecture.jpg)
 
 ## Initial setup with GCP and Docker
@@ -23,27 +32,63 @@ docker network create pg-network
 ```
 
 ```
-docker run -it \
-  -e POSTGRES_USER="root" \
-  -e POSTGRES_PASSWORD="root" \
-  -e POSTGRES_DB="ny_taxi" \
-  -v $(pwd)/ny_taxi_postgres_data:/var/lib/postgresql/data \
-  -p 5432:5432 \
-  --network=pg-network \
-  --name pg-database \
-  postgres:13
+services:
+  pgdatabase:
+    image: postgres:13
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=ny_taxi
+    volumes:
+      - "$(pwd)/ny_taxi_postgres_data:/var/lib/postgresql/data"
+    ports:
+      - "5432:5432"
+  pgadmin:
+    image: dpage/pgadmin4
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=admin@admin.com
+      - PGADMIN_DEFAULT_PASSWORD=root
+    ports:
+      - "8080:80"
+ ```
+Docker containers are stateless. Any changes done inside a container will **not** be saved when the container is killed and started again. As you can see I use volume mapping for the PostgreSQL database files to prevent data loss. Additionally, there are some necessary environment variables, such as user, password, database name, port, etc.
+
+
+## Creating a custom pipeline
+This is a dummy pipeline.py script that receives an argument and prints it.
+```python
+import sys
+import pandas
+
+# print arguments
+print(sys.argv)
+
+# argument 0 is the name os the file
+# argumment 1 contains the actual first argument we care about
+day = sys.argv[1]
+
+# print a sentence with the argument
+print(f'job finished successfully for day = {day}')
 ```
-As you can see I use volume mapping for the PostgreSQL database files to prevent data loss.
+With the following dockerfile, I containerized this script.
 
 ```
-docker run -it \
-  -e PGADMIN_DEFAULT_EMAIL="admin@admin.com" \
-  -e PGADMIN_DEFAULT_PASSWORD="root" \
-  -p 8080:80 \
-  --network=pg-network \
-  --name pgadmin-2 \
-  dpage/pgadmin4
- ```
+FROM python:3.9.1
+
+# installing prerequisites
+RUN pip install pandas
+
+# set up the working directory inside the container
+WORKDIR /app
+# copy the script to the container. 1st name is source file, 2nd is destination
+COPY pipeline.py pipeline.py
+
+# define what to do first when the container runs (run the script)
+ENTRYPOINT ["python", "pipeline.py"]
+```
+
+With the pipeline.py script and the dockerfile in the same directory I build the image with ```docker build``` and run it with an argument, so the pipeline will receice it (```docker run -it pipeline 2```).
+
 ## Scripting
 
 This script utilizes the argparse module to handle command-line arguments and employs the wget command to download a CSV file containing information about taxi trips in New York. Then it utilizes the SQLAlchemy library to establish a connection to the PostgreSQL database and incrementally reads the CSV file into Pandas DataFrames with a chunk size of 100.000 rows and writes each chunk into the PostgreSQL database. Additionally, the date values in the 'tpep_pickup_datetime' and 'tpep_dropoff_datetime' columns are converted into Pandas datetime objects.
@@ -128,6 +173,19 @@ if __name__ == '__main__':
 ```
 
 In the next step I dockerized the script.
+
+```
+FROM python:3.9.1
+
+RUN apt-get install wget
+# psycopg2 is a postgres db adapter for python: sqlalchemy needs it
+RUN pip install pandas sqlalchemy psycopg2
+
+WORKDIR /app
+COPY ingest_data.py ingest_data.py 
+
+ENTRYPOINT [ "python", "ingest_data.py" ]
+```
 
 ```
 URL="https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2021-01.csv.gz"
