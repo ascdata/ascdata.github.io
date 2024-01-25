@@ -9,7 +9,7 @@ layout: page
 ## About me
 I am a data enthusiast, who uses data warehouse, ETL and database technologies to visualize data from different sources. I am also interested in using modern cloud data engineering tools to extract valuable insights on complex datasets and automate things to make my daily work easier.
 
-I am passionate about technology, data, coding and complex problem solving. This has led me from IT infrastructure (bachelor professional) to data engineering (2+ years). I love python, databases, containerization and everything that’s beautifully engineered.
+I am passionate about technology, data, coding and complex problem solving. This has led me from IT infrastructure (bachelor professional, 4+ years) to data engineering (2+ years). I love python, databases, containerization and everything that’s beautifully engineered.
 
 ## On a personal note
 When I'm not working, I typically spend my time with my little son and wife, exercising, playing and recording my guitars, reading books and some video gaming.
