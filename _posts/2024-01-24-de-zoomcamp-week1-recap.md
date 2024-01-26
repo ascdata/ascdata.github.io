@@ -204,4 +204,55 @@ docker run -it \
 
 ## Terraform
 
-To be continued
+At first I set up a Terraform configuration. It's important that a Terraform configuration be in its own working directory. The main.tf file is written in the Terraform language and contains all the necessary information to describe basic infrastructure.
+
+```
+terraform {
+  required_providers {
+    google = {
+      source  = "hashicorp/google"
+      version = "4.51.0"
+    }
+  }
+}
+
+provider "google" {
+  project = "taxi-rides-ny-410014"
+  region  = "europe-west1"
+}
+
+resource "google_storage_bucket" "tera-bucket" {
+  name          = "taxi-rides-ny-410014-terra-bucket"
+  location      = "europe-west1"
+  force_destroy = true
+
+  lifecycle_rule {
+    condition {
+      age = 1
+    }
+    action {
+      type = "AbortIncompleteMultipartUpload"
+    }
+  }
+}
+```
+
+To submit the Google credentials, I assigned an environment variable in my bash shell:
+
+```export GOOGLE_CREDENTIALS="<path/to/authkeys>.json"```
+
+To check the variable, I used:
+
+```echo $GOOGLE_CREDENTIALS```
+
+Then, I initialized my work directory by downloading the necessary providers/plugins with the following command within the same directory as main.tf:
+
+```terraform init```
+
+To create a preview of the changes to be applied against a remote state, I used:
+
+```terraform plan```
+
+Finally, I applied the changes to the infrastructure:
+
+```terraform apply```
