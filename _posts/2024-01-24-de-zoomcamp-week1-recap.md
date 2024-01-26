@@ -211,7 +211,7 @@ In the following code there are resource types like google_storage_bucket and go
 - The google_storage_bucket resource type is used to create and configure a Google Cloud Storage Bucket. Google Cloud Storage is an object storage service that allows you to store data as objects in containers called buckets.
 - The google_bigquery_dataset resource type is used to create and configure a BigQuery Dataset. Google BigQuery is a fully managed, serverless database service for analyzing large datasets using SQL (Data Warehouse).
 
-```
+```tf
 terraform {
   required_providers {
     google = {
@@ -258,19 +258,25 @@ To check the variable, I used:
 
 Then I initialized my work directory by downloading the necessary providers/plugins with the following command within the same directory as main.tf:
 
-```terraform init```
+```tf
+terraform init
+```
 
 To create a preview of the changes to be applied against a remote state, I used:
 
-```terraform plan```
+```tf
+terraform plan
+```
 
 Finally I applied the changes to the infrastructure:
 
-```terraform apply```
+```tf
+terraform apply
+```
 
 Alternatively it's also possible to outsource the Terraform variables. Therefore I created a variables.tf file with the following content:
 
-```
+```tf
 variable "credentials" {
   description = "My Credentials"
   default     = "<path/to/authkeys>.json"
@@ -316,7 +322,7 @@ variable "gcs_storage_class" {
 
 I also had to modify the main.tf so that the variables will be used:
 
-```
+```tf
 terraform {
   required_providers {
     google = {
@@ -348,8 +354,6 @@ resource "google_storage_bucket" "terra-bucket" {
     }
   }
 }
-
-
 
 resource "google_bigquery_dataset" "terra_dataset" {
   dataset_id = var.bq_dataset_name
