@@ -204,7 +204,12 @@ docker run -it \
 
 ## Terraform
 
-At first I set up a Terraform configuration. It's important that a Terraform configuration be in its own working directory. The main.tf file is written in the Terraform language and contains all the necessary information to describe basic infrastructure.
+At first I set up a Terraform configuration. It's important that a Terraform configuration be in its own working directory. The main.tf file is written in the Terraform language and contains all the necessary information to describe basic infrastructure. In this case I hard-coded the credentials path but I don't recommend it.
+
+In the following code there are resource types like google_storage_bucket and google_bigquery_dataset.
+
+- The google_storage_bucket resource type is used to create and configure a Google Cloud Storage Bucket. Google Cloud Storage is an object storage service that allows you to store data as objects in containers called buckets.
+- The google_bigquery_dataset resource type is used to create and configure a BigQuery Dataset. Google BigQuery is a fully managed, serverless database service for analyzing large datasets using SQL (Data Warehouse).
 
 ```
 terraform {
@@ -217,6 +222,7 @@ terraform {
 }
 
 provider "google" {
+  credentials = "/home/Dev02/data-engineering-zoomcamp/week_1_basics_n_setup/1_terraform_gcp/terraform/terraform_basic/keys/creds.json"
   project = "taxi-rides-ny-410014"
   region  = "europe-west1"
 }
@@ -235,9 +241,14 @@ resource "google_storage_bucket" "tera-bucket" {
     }
   }
 }
+
+resource "google_bigquery_dataset" "terra-dataset" {
+  dataset_id = "terra_dataset"
+
+}
 ```
 
-To submit the Google credentials, I assigned an environment variable in my bash shell:
+To submit the Google credentials I assigned an environment variable in my bash shell:
 
 ```export GOOGLE_CREDENTIALS="<path/to/authkeys>.json"```
 
@@ -245,7 +256,7 @@ To check the variable, I used:
 
 ```echo $GOOGLE_CREDENTIALS```
 
-Then, I initialized my work directory by downloading the necessary providers/plugins with the following command within the same directory as main.tf:
+Then I initialized my work directory by downloading the necessary providers/plugins with the following command within the same directory as main.tf:
 
 ```terraform init```
 
@@ -253,6 +264,6 @@ To create a preview of the changes to be applied against a remote state, I used:
 
 ```terraform plan```
 
-Finally, I applied the changes to the infrastructure:
+Finally I applied the changes to the infrastructure:
 
 ```terraform apply```
