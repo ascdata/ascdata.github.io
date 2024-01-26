@@ -216,13 +216,13 @@ terraform {
   required_providers {
     google = {
       source  = "hashicorp/google"
-      version = "4.51.0"
+      version = "5.6.0"
     }
   }
 }
 
 provider "google" {
-  credentials = "/home/Dev02/data-engineering-zoomcamp/week_1_basics_n_setup/1_terraform_gcp/terraform/terraform_basic/keys/creds.json"
+  credentials = "<path/to/authkeys>.json"
   project = "taxi-rides-ny-410014"
   region  = "europe-west1"
 }
@@ -267,3 +267,92 @@ To create a preview of the changes to be applied against a remote state, I used:
 Finally I applied the changes to the infrastructure:
 
 ```terraform apply```
+
+Alternatively it's also possible to outsource the Terraform variables. Therefore I created a variables.tf file with the following content:
+
+```
+variable "credentials" {
+  description = "My Credentials"
+  default     = "<path/to/authkeys>.json"
+  #ex: if you have a directory where this file is called keys with your service account json file
+  #saved there as my-creds.json you could use default = "./keys/my-creds.json"
+}
+
+
+variable "project" {
+  description = "Project"
+  default     = "taxi-rides-ny-410014"
+}
+
+variable "region" {
+  description = "Region"
+  #Update the below to your desired region
+  default     = "europe-west1"
+}
+
+variable "location" {
+  description = "Project Location"
+  #Update the below to your desired location
+  default     = "europe-west1"
+}
+
+variable "bq_dataset_name" {
+  description = "My BigQuery Dataset Name"
+  #Update the below to what you want your dataset to be called
+  default     = "terra_dataset"
+}
+
+variable "gcs_bucket_name" {
+  description = "My Storage Bucket Name"
+  #Update the below to a unique bucket name
+  default     = "taxi-rides-ny-410014-terra-bucket"
+}
+
+variable "gcs_storage_class" {
+  description = "Bucket Storage Class"
+  default     = "STANDARD"
+}
+```
+
+I also had to modify the main.tf so that the variables will be used:
+
+```
+terraform {
+  required_providers {
+    google = {
+      source  = "hashicorp/google"
+      version = "5.6.0"
+    }
+  }
+}
+
+provider "google" {
+  credentials = file(var.credentials)
+  project     = var.project
+  region      = var.region
+}
+
+
+resource "google_storage_bucket" "terra-bucket" {
+  name          = var.gcs_bucket_name
+  location      = var.location
+  force_destroy = true
+
+
+  lifecycle_rule {
+    condition {
+      age = 1
+    }
+    action {
+      type = "AbortIncompleteMultipartUpload"
+    }
+  }
+}
+
+
+
+resource "google_bigquery_dataset" "terra_dataset" {
+  dataset_id = var.bq_dataset_name
+  location   = var.location
+}
+```
