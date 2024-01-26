@@ -360,3 +360,5 @@ resource "google_bigquery_dataset" "terra_dataset" {
   location   = var.location
 }
 ```
+
+That was the content of my first week of the Data Engineering Zoomcamp. I have already learned a lot and look forward to the upcoming weeks!
