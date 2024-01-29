@@ -11,10 +11,10 @@ A Data Lake should not be mistaken for a Data Warehouse, as there are notable di
 
 __Data Processing__:  
 Data Lake: The data remains raw and undergoes minimal processing, typically being unstructured.  
-Data Warehouse: Data in the is refined through cleaning, pre-processing, and structuring for specific use cases
+Data Warehouse: Data is refined through cleaning, pre-processing, and structuring for specific use cases
 
 __Data Size__:  
-Data Lake: Data Lakes are extensive, containing vast amounts of data. Data is transformed when in use only and can be stored indefinitely. 
+Data Lake: Data Lakes are extensive, containing vast amounts of data. Data is transformed when in use only and can be stored indefinitely.   
 Data Warehouse: Data Warehouses are small in comparison with Data Lakes. Data is always preprocessed before ingestion and may be purged periodically.  
 
 __Structure__:  
