@@ -5,6 +5,8 @@ layout: post
 categories: media
 ---
 
+ ![Data Warehouse vs. Data Lake](https://raw.githubusercontent.com/ascdata/ascdata.github.io/master/_posts/media/datawarehouse-vs-datalake.JPG)
+
 A Data Lake should not be mistaken for a Data Warehouse, as there are notable distinctions:
 
 __Data Processing__:  
