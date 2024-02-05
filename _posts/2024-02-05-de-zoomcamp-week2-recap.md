@@ -232,6 +232,5 @@ When executing the pipeline, the CSV will be extracted from the URL, transformed
 This week's journey through the Data Engineering Zoomcamp has taken me deep into the heart of workflow orchestration with Mage. I've explored:
 
 - **Fundamentals of Workflow Orchestration:** Understanding how Mage can orchestrate various tasks, processes, and data workflows to achieve a specific outcome. 
-- **Building an ETL Pipeline:** I walked through constructing an efficient ETL pipeline using Mage, highlighting the integration with Python, PostgreSQL, and Google Cloud Storage for effective data handling.
-- **Advanced Concepts:** Delving into partitioning with Parquet files and pipeline scheduling, I touched upon more advanced topics that will further enhance my engineering skills.
+- **Building an ETL Pipeline:** I walked through constructing an efficient ETL pipeline using Mage, emphasizing the integration with Python, PostgreSQL, and Google Cloud Storage for effective data handling.
 
