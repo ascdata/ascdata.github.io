@@ -25,7 +25,8 @@ Mage has components that make code highly reusable (called Blocks). There are th
 2. Transformer
 3. Data Exporter
 
-  ![Mage Pipeline](https://github.com/ascdata/ascdata.github.io/blob/master/_posts/media/week_2_mage_pipeline.JPG)
+  ![Mage Pipeline](https://raw.githubusercontent.com/ascdata/ascdata.github.io/master/_posts/media/week_2_mage_pipeline.JPG)
+
 
 
 The first pipeline I built is an ETL pipeline using blocks to load the yellow taxi data from a URL, transform the data, and export it into a PostgreSQL database within my Docker container.
@@ -168,7 +169,7 @@ Setting the 'config_profile' to 'dev' instead of 'default' allows access to the 
 
 _For insight into the Mage GUI, here's a screenshot:_
 
-![Mage](https://github.com/ascdata/ascdata.github.io/blob/master/_posts/media/week_2_mage_mage.JPG)
+![Mage](https://raw.githubusercontent.com/ascdata/ascdata.github.io/master/_posts/media/week_2_mage_mage.JPG)
 
 ```python
 # Import necessary libraries and modules
