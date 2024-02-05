@@ -25,7 +25,8 @@ Mage has components that make code highly reusable (called Blocks). There are th
 2. Transformer
 3. Data Exporter
 
-![Mage Pipeline](https://github.com/ascdata/ascdata.github.io/blob/master/_posts/media/week_2_mage_pipeline.JPG)
+  ![Mage Pipeline](https://github.com/ascdata/ascdata.github.io/blob/master/_posts/media/week_2_mage_pipeline.JPG)
+
 
 The first pipeline I built is an ETL pipeline using blocks to load the yellow taxi data from a URL, transform the data, and export it into a PostgreSQL database within my Docker container.
 For this, I had to set up a YAML profile (called 'dev' in this case) in the io_config.yml file. The following code block utilizes environmental variables from the .env file.
