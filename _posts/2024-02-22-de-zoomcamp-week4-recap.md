@@ -154,17 +154,7 @@ The dbt-utils package for example includes the macro surrogate_key to create a s
 
 ![surrogate](https://raw.githubusercontent.com/ascdata/ascdata.github.io/master/_posts/media/week4_surrogate.jpg)
 
-With the codegen package you can configure your dbt project to automatically generate documentation in web format and published in dbt cloud. Open a new file on a + button on the right up side and write this code:
-
-```yml
-{% set models_to_generate = codegen.get_models(directory=staging) %}
-
-{{ codegen.generate_model_yaml(
-
-    model_names = models_to_generate
-
-) }}
-```
+With the codegen package you can configure your dbt project to automatically generate documentation in web format and published in dbt cloud. 
 
 It is going to generate documentation for all tales in the staging models. Change staging to core and you are going to get documentation for tables in the core models.
 
