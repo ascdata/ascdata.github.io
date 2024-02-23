@@ -268,7 +268,7 @@ Macros allows to add features to SQL that are not otherwise available, such as:
 * Use environment variables
 * Abstract snippets of SQL into reusable macros
 
-Macros are defined in separate `.sql` files.
+Macros are defined in separate .sql files.
 
 Here's a macro definition example:
 
@@ -288,7 +288,7 @@ Here's a macro definition example:
 
 {% endmacro %}
 ```
-* The `macro` keyword states that the line is a macro definition. It includes the name of the macro as well as the parameters.
+* The macro keyword states that the line is a macro definition. It includes the name of the macro as well as the parameters.
 * The code of the macro itself goes between two statement delimiters. The second statement delimiter contains an `endmacro` keyword.
 
 Here's how to use the macro:
