@@ -121,3 +121,63 @@ By default, there are four ways to materialise queries:
 4. ephemeral: They do not generate an object directly in the database; instead, they create a CTE (Common Table Expression), which is a temporary subquery to use in other queries (such as WITH SQL Server).
 
 To build the model, you need to execute the command "dbt build". If you don't include any parameters, dbt will compile and build all the models. To specify that you only want to build a specific one, you can add the parameter "--select".
+
+# Sources
+
+In dbt, sources are configurations that define how to connect to external data systems or databases, especially when the source is a database table (BigQuery). These configurations are typically specified in a schema.yml file, which needs to be created in the same directory as the model you're working on.
+
+When building the model, you'll use a jinja macro notation to replace the "schema.table name" in your SQL queries with a reference to the configuration defined in the schema.yml file. This allows dbt to dynamically fetch the data from the specified source. For example:
+
+![sources](https://raw.githubusercontent.com/ascdata/ascdata.github.io/master/_posts/media/week4_sources.jpg)
+
+The schema.yml file contains important details such as the version, source name, database, schema and tables. By keeping this configuration separate from the models, it offers the advantage of centralising connection details. This means you can easily change the connection for all models by updating just one file, providing greater flexibility and ease of maintenance in your dbt project.
+
+# Seeds
+Seeds are like special files (usually CSV) in your dbt project that hold data you want to put into your database. They live in a folder called "seeds" in your dbt project. It's a good idea to use seeds for data that doesn't change much.
+
+To make a seed, you just need to upload a CSV file into the "seeds" folder in your project. For our project we have a file called "taxi_zone_lookup.csv". You can then run a command in dbt like "dbt seed taxi_zone_lookup.csv". This command tells dbt to take the data from your CSV file and put it into a table in your database. Easy, right?
+
+# Macros
+Macros in dbt are like reusable pieces of code that you can use over and over again in your data transformations. Think of them as similar to functions in other programming languages. They're super handy when you find yourself writing the same code in multiple models. You define macros in .sql files located in the macros directory of your dbt project.
+
+For example, for our project we are going to create a macro called "get_payment_type_description". This macro takes a value from the "payment_type" column as input and uses a CASE WHEN statement to return the corresponding description. We define this macro in a .sql file and then we can use it in various models throughout our project. It's a great way to keep our code organised and avoid repeating ourselves.
+
+![macros](https://raw.githubusercontent.com/ascdata/ascdata.github.io/master/_posts/media/week4_macros.jpg)
+
+# Packages
+It allows us to reuse macros between different projects, similar to libraries or modules in other programming languages. To use a package in your project, create a packages.yml configuration file in the root directory of your dbt project.
+
+![packages](https://raw.githubusercontent.com/ascdata/ascdata.github.io/master/_posts/media/week4_packages.jpg)
+
+Dbt is going to install them automatically with command dbt deps.
+The dbt-utils package for example includes the macro surrogate_key to create a surrogate key.
+
+![surrogate](https://raw.githubusercontent.com/ascdata/ascdata.github.io/master/_posts/media/week4_surrogate.jpg)
+
+With the codegen package you can configure your dbt project to automatically generate documentation in web format and published in dbt cloud. Open a new file on a + button on the right up side and write this code:
+
+```yml
+{% set models_to_generate = codegen.get_models(directory=staging) %}
+
+{{ codegen.generate_model_yaml(
+
+    model_names = models_to_generate
+
+) }}
+```
+
+It is going to generate documentation for all tales in the staging models. Change staging to core and you are going to get documentation for tables in the core models.
+
+# Looker Studio
+
+Looker Studio provides a user-friendly interface for building and customising dashboards and reports without needing to write any code.
+
+With Looker Studio, users can:
+
+- Design Dashboards: Easily drag and drop visualisations, charts, and widgets onto a canvas to create interactive dashboards.
+- Customise Reports: Customise the appearance and layout of reports to suit specific needs and preferences.
+- Explore Data: Explore and analyse data visually using intuitive tools and filters.
+- Collaborate: Share dashboards and reports with team members, collaborate on insights, and make data-driven decisions together.
+- Embed: Embed dashboards and reports into other applications or websites for wider distribution and accessibility.
+
+There are two types of elements: reports and data sources. The first are the dashboards with the visualisations and the second are the connectors with the tables of the source systems. The first step to generate a dashboard is to configure the data sources.
