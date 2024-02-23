@@ -282,30 +282,6 @@ select
     -- ...
 ```
 
-## Variables
-
-Like most other programming languages, ***variables*** can be defined and used across the project.
-
-Variables can be defined in two different ways:
-* Under the `vars` keyword inside `dbt_project.yml`.
-    ```yaml
-    vars:
-        payment_type_values: [1, 2, 3, 4, 5, 6]
-    ```
-* As arguments when building or running the project.
-    ```sh
-    dbt build --m <your-model.sql> --var 'is_test_run: false'
-    ```
-
-Variables can be used with the `var()` macro. For example:
-
-```sql
-{% if var('is_test_run', default=true) %}
-
-    limit 100
-
-{% endif %}
-```
 
 To be continued.
 
