@@ -268,7 +268,7 @@ Macros allows to add features to SQL that are not otherwise available, such as:
 * Use environment variables
 * Abstract snippets of SQL into reusable macros
 
-Macros are defined in separate `.sql` files which are typically stored in a `macros` directory.
+Macros are defined in separate `.sql` files.
 
 Here's a macro definition example:
 
