@@ -270,7 +270,7 @@ Macros allows to add features to SQL that are not otherwise available, such as:
 
 Macros are defined in separate .sql files.
 
-Here's a macro definition example:
+Here is a macro definition example:
 
 ```sql
 {# This macro returns the description of the payment_type #}
