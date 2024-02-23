@@ -109,4 +109,262 @@ I will use the dbt Cloud IDE.
 
 ![dbt](https://raw.githubusercontent.com/ascdata/ascdata.github.io/master/_posts/media/dbt.png)
 
+# Anatomy of a dbt model
+
+dbt models are mostly written in SQL but they also make use of the [Jinja templating language](https://jinja.palletsprojects.com/en/3.0.x/) for templates. 
+
+Here's an example dbt model:
+
+```sql
+{{
+    config(materialized='table')
+}}
+
+SELECT *
+FROM staging.source_table
+WHERE record_state = 'ACTIVE'
+```
+
+* In the Jinja statement defined within the `{{ }}` block I call the [`config()` function](https://docs.getdbt.com/reference/dbt-jinja-functions/config).
+* I commonly use the `config()` function at the beginning of a model to define a ***materialization strategy***: a strategy for persisting dbt models in a warehouse.
+    * The `table` strategy means that the model will be rebuilt as a table on each run.
+    * The `view` strategy would rebuild the model on each run as a SQL view.
+    * The `incremental` strategy is essentially a `table` strategy but it allows us to add or update records incrementally rather than rebuilding the complete table on each run.
+    * The `ephemeral` strategy creates a Common Table Expression.
+  
+dbt will compile this code into the following SQL query:
+
+```sql
+CREATE TABLE my_schema.my_model AS (
+    SELECT *
+    FROM staging.source_table
+    WHERE record_state = 'ACTIVE'
+)
+```
+
+After the code is compiled, dbt will run the compiled code in the Data Warehouse. Additional model properties are stored in YAML files. Traditionally, these files were named `schema.yml`.
+
+# The FROM clause
+
+The `FROM` clause within a `SELECT` statement defines the _sources_ of the data to be used.
+
+The following sources are available to dbt models:
+
+* ***Sources***: The data loaded within the Data Warehouse.
+    * This data can be accessed with the `source()` function.
+    * The `sources` key in othe YAML file contains the details of the databases that the `source()` function can access and translate into proper SQL-valid names.
+        * Additionally, "source freshness" can be defined to each source to check whether a source is "fresh" or "stale", which can be useful to check whether the data pipelines are working properly.
+
+* ***Seeds***: CSV files which can be stored in the repo under the `seeds` folder.
+    * The repo gives version controlling along with all of its benefits.
+    * Seeds are best suited to static data which changes infrequently.
+    * Seed usage:
+        1. Add a CSV file to the `seeds` folder.
+        2. Run the `dbt seed` to create a table in the Data Warehouse.
+        3. Refer to the seed in the model with the `ref()` function.
+
+Here's an example of a source in a `.yml` file:
+
+```yaml
+sources:
+    - name: staging
+      database: production
+      schema: trips_data_all
+
+      loaded_at_field: record_loaded_at
+      tables:
+        - name: green_tripdata
+        - name: yellow_tripdata
+          freshness:
+            error_after: {count: 6, period: hour}
+```
+
+And here's how to reference a source in a `FROM` clause:
+
+```sql
+FROM {{ source('staging','yellow_tripdata') }}
+```
+* The first argument of the `source()` function is the source name, and the second is the table name.
+
+In this case the `taxi_zone_lookup.csv` file in my `seeds` folder contains `locationid`, `borough`, `zone` and `service_zone`:
+
+```sql
+SELECT
+    locationid,
+    borough,
+    zone,
+    replace(service_zone, 'Boro', 'Green') as service_zone
+FROM {{ ref('taxi_zone_lookup) }}
+```
+
+The `ref()` function references underlying tables and views in the Data Warehouse. When compiled, it will automatically build the dependencies and resolve the correct schema. 
+So, if BigQuery contains a schema/dataset called `dbt_dev` inside the database which I'm using for development and it contains a table called `stg_green_tripdata`, then the following code...
+
+```sql
+WITH green_data AS (
+    SELECT *,
+        'Green' AS service_type
+    FROM {{ ref('stg_green_tripdata') }}
+),
+```
+
+...will compile to this:
+
+```sql
+WITH green_data AS (
+    SELECT *,
+        'Green' AS service_type
+    FROM "my_project"."dbt_dev"."stg_green_tripdata"
+),
+```
+* The `ref()` function translates the references table into the full reference, using the `database.schema.table` structure.
+
+# Defining a source and creating a model
+
+I created two new folders under my `models` folder:
+* `staging` will have the raw models.
+* `core` will have the models that we will expose at the end to the BI tool.
+
+Under `staging` I will add two new files: `sgt_green_tripdata.sql` and `schema.yml`:
+```yaml
+# schema.yml
+
+version: 2
+
+sources:
+    - name: staging
+      database: your_project
+      schema: trips_data_all
+
+      tables:
+          - name: green_tripdata
+          - name: yellow_tripdata
+```
+* I defined the ***sources*** in the `schema.yml` model properties file.
+* I defined the two tables for yellow and green taxi data as my sources.
+```sql
+-- sgt_green_tripdata.sql
+
+{{ config(materialized='view') }}
+
+select * from {{ source('staging', 'green_tripdata') }}
+limit 100
+```
+* This query will create a ***view*** in the `staging` dataset/schema in the database.
+* I made use of the `source()` function to access the green taxi data table, which is defined inside the `schema.yml` file.
+
+The advantage of having the properties in a separate file is that I can easily modify the `schema.yml` file to change the database details and write to different databases without having to modify my `sgt_green_tripdata.sql` file.
+
+The model can be run with the `dbt run` command.
+
+# Macros
+
+***Macros*** are pieces of code in Jinja that can be reused, similar to functions in other languages.
+
+dbt already includes a series of macros like `config()`, `source()` and `ref()`, but custom macros can also be defined.
+
+Macros allows to add features to SQL that aren't otherwise available, such as:
+* Use control structures such as `if` statements or `for` loops
+* Use environment variables
+* Abstract snippets of SQL into reusable macros
+
+Macros are defined in separate `.sql` files which are typically stored in a `macros` directory.
+
+There are 3 kinds of Jinja _delimiters_:
+* `{% ... %}` for ***statements*** 
+* `{{ ... }}` for ***expressions***
+* `{# ... #}` for comments.
+
+Here's a macro definition example:
+
+```sql
+{# This macro returns the description of the payment_type #}
+
+{% macro get_payment_type_description(payment_type) %}
+
+    case {{ payment_type }}
+        when 1 then 'Credit card'
+        when 2 then 'Cash'
+        when 3 then 'No charge'
+        when 4 then 'Dispute'
+        when 5 then 'Unknown'
+        when 6 then 'Voided trip'
+    end
+
+{% endmacro %}
+```
+* The `macro` keyword states that the line is a macro definition. It includes the name of the macro as well as the parameters.
+* The code of the macro itself goes between two statement delimiters. The second statement delimiter contains an `endmacro` keyword.
+
+Here's how to use the macro:
+```sql
+select
+    {{ get_payment_type_description('payment-type') }} as payment_type_description,
+    congestion_surcharge::double precision
+from {{ source('staging','green_tripdata') }}
+where vendorid is not null
+```
+* It passes a `payment-type` variable which may be an integer from 1 to 6.
+
+And this is what it would compile to:
+```sql
+select
+    case payment_type
+        when 1 then 'Credit card'
+        when 2 then 'Cash'
+        when 3 then 'No charge'
+        when 4 then 'Dispute'
+        when 5 then 'Unknown'
+        when 6 then 'Voided trip'
+    end as payment_type_description,
+    congestion_surcharge::double precision
+from {{ source('staging','green_tripdata') }}
+where vendorid is not null
+```
+* The macro is replaced by the code contained within the macro definition.
+
+## Packages
+
+Macros can be exported to ***packages***, similarly to how classes and functions can be exported to libraries in other languages. Packages contain standalone dbt projects with models and macros that tackle a specific problem area.
+
+To use a package, a `packages.yml` file has to be created in the work directory. Here's an example:
+```yaml
+packages:
+  - package: dbt-labs/dbt_utils
+    version: 0.8.0
+```
+
+After declaring the packages, they have to be installed by running the `dbt deps` command.
+
+Macros can be accessed inside a package as follows:
+```sql
+select
+    {{ dbt_utils.surrogate_key(['vendorid', 'lpep_pickup_datetime']) }} as tripid,
+    cast(vendorid as integer) as vendorid,
+    -- ...
+```
+
+## Variables
+
+Like most other programming languages, ***variables*** can be defined and used across the project.
+
+Variables can be defined in two different ways:
+* Under the `vars` keyword inside `dbt_project.yml`.
+    ```yaml
+    vars:
+        payment_type_values: [1, 2, 3, 4, 5, 6]
+    ```
+* As arguments when building or running the project.
+    ```sh
+    dbt build --m <your-model.sql> --var 'is_test_run: false'
+    ```
+
+Variables can be used with the `var()` macro. For example:
+```sql
+{% if var('is_test_run', default=true) %}
+
+    limit 100
+
+{% endif %}
+```
 To be continued.
