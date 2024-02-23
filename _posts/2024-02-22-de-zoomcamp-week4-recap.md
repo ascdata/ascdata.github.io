@@ -268,9 +268,7 @@ Macros allows to add features to SQL that are not otherwise available, such as:
 * Use environment variables
 * Abstract snippets of SQL into reusable macros
 
-Macros are defined in separate .sql files.
-
-Here is a macro definition example:
+Here is a definition example:
 
 ```sql
 {# This macro returns the description of the payment_type #}
