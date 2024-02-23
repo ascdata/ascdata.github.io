@@ -270,11 +270,6 @@ Macros allows to add features to SQL that are not otherwise available, such as:
 
 Macros are defined in separate `.sql` files which are typically stored in a `macros` directory.
 
-There are 3 kinds of Jinja _delimiters_:
-* `{% ... %}` for ***statements*** 
-* `{{ ... }}` for ***expressions***
-* `{# ... #}` for comments.
-
 Here's a macro definition example:
 
 ```sql
