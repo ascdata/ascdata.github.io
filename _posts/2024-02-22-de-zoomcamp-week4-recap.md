@@ -298,6 +298,7 @@ Variables can be defined in two different ways:
     ```
 
 Variables can be used with the `var()` macro. For example:
+
 ```sql
 {% if var('is_test_run', default=true) %}
 
@@ -305,5 +306,6 @@ Variables can be used with the `var()` macro. For example:
 
 {% endif %}
 ```
+
 To be continued.
 
