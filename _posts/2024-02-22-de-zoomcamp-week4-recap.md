@@ -113,18 +113,6 @@ I will use the dbt Cloud IDE.
 
 dbt models are mostly written in SQL but they also make use of the [Jinja templating language](https://jinja.palletsprojects.com/en/3.0.x/) for templates. 
 
-Here's an example dbt model:
-
-```sql
-{{
-    config(materialized='table')
-}}
-
-SELECT *
-FROM staging.source_table
-WHERE record_state = 'ACTIVE'
-```
-
 * In the Jinja statement defined within the `{{ }}` block I call the [`config()` function](https://docs.getdbt.com/reference/dbt-jinja-functions/config).
 * I commonly use the `config()` function at the beginning of a model to define a ***materialization strategy***: a strategy for persisting dbt models in a warehouse.
     * The `table` strategy means that the model will be rebuilt as a table on each run.
@@ -178,13 +166,6 @@ sources:
           freshness:
             error_after: {count: 6, period: hour}
 ```
-
-And here's how to reference a source in a `FROM` clause:
-
-```sql
-FROM {{ source('staging','yellow_tripdata') }}
-```
-* The first argument of the `source()` function is the source name, and the second is the table name.
 
 In this case the `taxi_zone_lookup.csv` file in my `seeds` folder contains `locationid`, `borough`, `zone` and `service_zone`:
 
@@ -242,24 +223,8 @@ sources:
 ```
 * I defined the ***sources*** in the `schema.yml` model properties file.
 * I defined the two tables for yellow and green taxi data as my sources.
-```sql
--- sgt_green_tripdata.sql
 
-{{ config(materialized='view') }}
-
-select * from {{ source('staging', 'green_tripdata') }}
-limit 100
-```
-* This query will create a ***view*** in the `staging` dataset/schema in the database.
-* I made use of the `source()` function to access the green taxi data table, which is defined inside the `schema.yml` file.
-
-The advantage of having the properties in a separate file is that I can easily modify the `schema.yml` file to change the database details and write to different databases without having to modify my `sgt_green_tripdata.sql` file.
-
-The model can be run with the `dbt run` command.
-
-
-
-
+The advantage of having the properties in a separate file is that I can easily modify the `schema.yml` file to change the database details and write to different databases without having to modify my `sgt_green_tripdata.sql` file. The model can be run with the `dbt run` command.
 
 ## Packages
 
