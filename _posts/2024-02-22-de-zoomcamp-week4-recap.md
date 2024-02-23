@@ -257,61 +257,53 @@ The advantage of having the properties in a separate file is that I can easily m
 
 The model can be run with the `dbt run` command.
 
-# Macros
 
-***Macros*** are pieces of code in Jinja that can be reused, similar to functions in other languages.
 
-dbt already includes a series of macros like `config()`, `source()` and `ref()`, but custom macros can also be defined.
 
-Macros allows to add features to SQL that are not otherwise available, such as:
-* Use control structures such as `if` statements or `for` loops
-* Use environment variables
-* Abstract snippets of SQL into reusable macros
 
-Here is a definition example:
+## Packages
 
-```sql
-{# This macro returns the description of the payment_type #}
+Macros can be exported to ***packages***, similarly to how classes and functions can be exported to libraries in other languages. Packages contain standalone dbt projects with models and macros that tackle a specific problem area.
 
-{% macro get_payment_type_description(payment_type) %}
-
-    case {{ payment_type }}
-        when 1 then 'Credit card'
-        when 2 then 'Cash'
-        when 3 then 'No charge'
-        when 4 then 'Dispute'
-        when 5 then 'Unknown'
-        when 6 then 'Voided trip'
-    end
-
-{% endmacro %}
+To use a package, a `packages.yml` file has to be created in the work directory. Here's an example:
+```yaml
+packages:
+  - package: dbt-labs/dbt_utils
+    version: 0.8.0
 ```
-* The macro keyword states that the line is a macro definition. It includes the name of the macro as well as the parameters.
-* The code of the macro itself goes between two statement delimiters. The second statement delimiter contains an endmacro keyword.
 
-Here's how to use the macro:
+After declaring the packages, they have to be installed by running the `dbt deps` command.
+
+Macros can be accessed inside a package as follows:
 ```sql
 select
-    {{ get_payment_type_description('payment-type') }} as payment_type_description,
-    congestion_surcharge::double precision
-from {{ source('staging','green_tripdata') }}
-where vendorid is not null
+    {{ dbt_utils.surrogate_key(['vendorid', 'lpep_pickup_datetime']) }} as tripid,
+    cast(vendorid as integer) as vendorid,
+    -- ...
 ```
-* It passes a `payment-type` variable which may be an integer from 1 to 6.
 
-And this is what it would compile to:
+## Variables
+
+Like most other programming languages, ***variables*** can be defined and used across the project.
+
+Variables can be defined in two different ways:
+* Under the `vars` keyword inside `dbt_project.yml`.
+    ```yaml
+    vars:
+        payment_type_values: [1, 2, 3, 4, 5, 6]
+    ```
+* As arguments when building or running the project.
+    ```sh
+    dbt build --m <your-model.sql> --var 'is_test_run: false'
+    ```
+
+Variables can be used with the `var()` macro. For example:
 ```sql
-select
-    case payment_type
-        when 1 then 'Credit card'
-        when 2 then 'Cash'
-        when 3 then 'No charge'
-        when 4 then 'Dispute'
-        when 5 then 'Unknown'
-        when 6 then 'Voided trip'
-    end as payment_type_description,
-    congestion_surcharge::double precision
-from {{ source('staging','green_tripdata') }}
-where vendorid is not null
+{% if var('is_test_run', default=true) %}
+
+    limit 100
+
+{% endif %}
 ```
-* The macro is replaced by the code contained within the macro definition.
+To be continued.
+
