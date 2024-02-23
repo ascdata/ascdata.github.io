@@ -289,7 +289,7 @@ Here's a macro definition example:
 {% endmacro %}
 ```
 * The macro keyword states that the line is a macro definition. It includes the name of the macro as well as the parameters.
-* The code of the macro itself goes between two statement delimiters. The second statement delimiter contains an `endmacro` keyword.
+* The code of the macro itself goes between two statement delimiters. The second statement delimiter contains an endmacro keyword.
 
 Here's how to use the macro:
 ```sql
