@@ -181,3 +181,7 @@ With Looker Studio, users can:
 - Embed: Embed dashboards and reports into other applications or websites for wider distribution and accessibility.
 
 There are two types of elements: reports and data sources. The first are the dashboards with the visualisations and the second are the connectors with the tables of the source systems. The first step to generate a dashboard is to configure the data sources.
+
+When you choose the table you can start designing your beautiful dashboards.
+
+![looker](https://raw.githubusercontent.com/ascdata/ascdata.github.io/master/_posts/media/week4_looker.png)
