@@ -263,7 +263,7 @@ The model can be run with the `dbt run` command.
 
 dbt already includes a series of macros like `config()`, `source()` and `ref()`, but custom macros can also be defined.
 
-Macros allows to add features to SQL that aren't otherwise available, such as:
+Macros allows to add features to SQL that are not otherwise available, such as:
 * Use control structures such as `if` statements or `for` loops
 * Use environment variables
 * Abstract snippets of SQL into reusable macros
