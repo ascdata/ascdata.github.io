@@ -256,3 +256,64 @@ limit 100
 The advantage of having the properties in a separate file is that I can easily modify the `schema.yml` file to change the database details and write to different databases without having to modify my `sgt_green_tripdata.sql` file.
 
 The model can be run with the `dbt run` command.
+
+# Macros
+
+***Macros*** are pieces of code in Jinja that can be reused, similar to functions in other languages.
+
+dbt already includes a series of macros like `config()`, `source()` and `ref()`, but custom macros can also be defined.
+
+Macros allows to add features to SQL that are not otherwise available, such as:
+* Use control structures such as `if` statements or `for` loops
+* Use environment variables
+* Abstract snippets of SQL into reusable macros
+
+Macros are defined in separate .sql files.
+
+Here is a macro definition example:
+
+```sql
+{# This macro returns the description of the payment_type #}
+
+{% macro get_payment_type_description(payment_type) %}
+
+    case {{ payment_type }}
+        when 1 then 'Credit card'
+        when 2 then 'Cash'
+        when 3 then 'No charge'
+        when 4 then 'Dispute'
+        when 5 then 'Unknown'
+        when 6 then 'Voided trip'
+    end
+
+{% endmacro %}
+```
+* The macro keyword states that the line is a macro definition. It includes the name of the macro as well as the parameters.
+* The code of the macro itself goes between two statement delimiters. The second statement delimiter contains an endmacro keyword.
+
+Here's how to use the macro:
+```sql
+select
+    {{ get_payment_type_description('payment-type') }} as payment_type_description,
+    congestion_surcharge::double precision
+from {{ source('staging','green_tripdata') }}
+where vendorid is not null
+```
+* It passes a `payment-type` variable which may be an integer from 1 to 6.
+
+And this is what it would compile to:
+```sql
+select
+    case payment_type
+        when 1 then 'Credit card'
+        when 2 then 'Cash'
+        when 3 then 'No charge'
+        when 4 then 'Dispute'
+        when 5 then 'Unknown'
+        when 6 then 'Voided trip'
+    end as payment_type_description,
+    congestion_surcharge::double precision
+from {{ source('staging','green_tripdata') }}
+where vendorid is not null
+```
+* The macro is replaced by the code contained within the macro definition.
