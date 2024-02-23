@@ -4,7 +4,7 @@ mathjax: true
 layout: post
 categories: media
 ---
-
+<!--
 # What is Analytics Engineering?
 
 As the data domain has developed over time, new tools have been introduced that have changed the dynamics of working with data:
@@ -363,3 +363,4 @@ Variables can be used with the `var()` macro. For example:
 {% endif %}
 ```
 To be continued.
+-->
