@@ -78,7 +78,7 @@ df = spark.read \
 
 df.show()
 ```
-You got this as a result:
+And got this as a result:
 
 ![result](https://raw.githubusercontent.com/ascdata/ascdata.github.io/master/_posts/media/week5_result.png)
 
