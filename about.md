@@ -15,6 +15,7 @@ I am passionate about technology, data, coding and complex problem solving. This
 When I'm not working, I typically spend my time with my little son and wife, exercising, playing and recording my guitars, reading books and some video gaming.
 
 Here are some books that inspire me:
+- [Joe Reis, Matt Housley - Fundamentals of Data Engineering: Plan and Build Robust Data Systems](https://www.goodreads.com/book/show/61218623-fundamentals-of-data-engineering)
 - [Dale Carnegie - How to Win Friends and Influence People](https://www.goodreads.com/book/show/4865.How_to_Win_Friends_and_Influence_People)
 - [Robert T. Kiyosaki - Rich Dad, Poor Dad](https://www.goodreads.com/book/show/69571.Rich_Dad_Poor_Dad?from_search=true&from_srp=true&qid=cWknLveC4t&rank=1)
 - [Alex Giesecke, Nico Schork - Kein Limit](https://www.goodreads.com/book/show/35300186-kein-limit?ref=nav_sb_ss_1_10)
