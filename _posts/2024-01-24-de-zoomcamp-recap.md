@@ -1,5 +1,5 @@
 ---
-title:  "Data Engineering Zoomcamp Week 1: GCP, Docker, PostgreSQL, Jupyter Notebook, Terraform"
+title:  "Data Engineering Zoomcamp: GCP, Docker, PostgreSQL, Jupyter Notebook, Terraform"
 mathjax: true
 layout: post
 categories: media
