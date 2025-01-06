@@ -9,10 +9,10 @@ layout: page
 Ich bin Daten-Enthusiast und begeistert davon, Informationen aus unterschiedlichsten Quellen sichtbar und verständlich zu machen. Dafür nutze ich verschiedene Tools zur Extraktion, Transformation und Visualisierung von Daten.
 Besonders fasziniert mich das Web Scraping, mit dem ich wertvolle Erkenntnisse aus komplexen Datensätzen gewinne.
 
-Mein beruflicher Weg begann in der IT-Infrastruktur, wo ich über sechs Jahre Erfahrung gesammelt habe. Seit mehr als drei Jahren arbeite ich im Data-Bereich und fokussiere mich auf datengetriebene Lösungen, insbesondere im Bereich Business Intelligence. Python, Datenbanken und Containerisierung zählen zu meinen Lieblingsthemen – vor allem, wenn sie technisch anspruchsvoll und elegant umgesetzt sind.
+Mein beruflicher Weg begann in der IT-Infrastruktur, wo ich über sechs Jahre Erfahrung gesammelt habe. Seit mehr als drei Jahren arbeite ich im Data-Bereich und fokussiere mich auf datengetriebene Lösungen, insbesondere im Bereich Business Intelligence. Python, Datenbanken und Containerisierung zählen zu meinen Lieblingsthemen, vor allem wenn sie technisch anspruchsvoll und elegant umgesetzt sind.
 
 ## Persönliches
-Abseits von Daten und Technik verbringe ich Zeit mit meiner Frau und meinem kleinen Sohn. Außerdem treibe ich gerne Sport, spiele E-Gitarre, lese inspirierende Bücher, schreibe oder entspanne mich gelegentlich bei Videospielen.
+Abseits von Daten und Technik verbringe ich Zeit mit meiner Frau und meinem kleinen Sohn. Ich treibe gerne Sport, spiele E-Gitarre, lese inspirierende Bücher, schreibe oder entspanne mich gelegentlich bei Videospielen.
 
 Diese Bücher kann ich besonders empfehlen (die ersten beiden sind wie meine tägliche Bibel):
 - [Ryan Holiday, Stephen Hanselman - The Daily Stoic: 366 Meditations on Wisdom, Perseverance, and the Art of Living](https://www.goodreads.com/book/show/29093292-the-daily-stoic?ref=nav_sb_ss_1_14)
