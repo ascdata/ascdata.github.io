@@ -1,5 +1,5 @@
 ---
-title:  "Data Engineering Zoomcamp Week 4: Analytics Engineering and Data Visualization"
+title:  "Data Engineering Zoomcamp: Analytics Engineering and Data Visualization"
 mathjax: true
 layout: post
 categories: media
