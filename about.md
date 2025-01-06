@@ -6,7 +6,6 @@ layout: page
 
 <img src="https://github.com/ascdata/ascdata.github.io/raw/master/assets/pictures/landscape_sun.JPG" alt="Sonnenuntergang" width="500"/>
 
-## Über mich
 Ich bin Daten-Enthusiast und begeistert davon, Informationen aus unterschiedlichsten Quellen sichtbar und verständlich zu machen. Dafür nutze ich verschiedene Tools zur Extraktion, Transformation und Visualisierung von Daten.
 Besonders fasziniert mich das Web Scraping, mit dem ich wertvolle Erkenntnisse aus komplexen Datensätzen gewinne.
 
