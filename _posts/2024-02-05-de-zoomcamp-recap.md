@@ -1,5 +1,5 @@
 ---
-title:  "Data Engineering Zoomcamp Week 2: Workflow Orchestration with Mage.AI"
+title:  "Data Engineering Zoomcamp: Workflow Orchestration with Mage.AI"
 mathjax: true
 layout: post
 categories: media
