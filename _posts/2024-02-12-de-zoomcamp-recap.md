@@ -1,5 +1,5 @@
 ---
-title:  "Data Engineering Zoomcamp Week 3: BigQuery"
+title:  "Data Engineering Zoomcamp: BigQuery"
 mathjax: true
 layout: post
 categories: media
