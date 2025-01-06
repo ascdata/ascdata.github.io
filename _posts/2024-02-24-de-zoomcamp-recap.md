@@ -1,5 +1,5 @@
 ---
-title:  "Data Engineering Zoomcamp Week 5: Batch Processing & Spark"
+title:  "Data Engineering Zoomcamp: Batch Processing & Spark"
 mathjax: true
 layout: post
 categories: media
