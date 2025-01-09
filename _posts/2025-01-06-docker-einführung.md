@@ -19,6 +19,9 @@ Mit Docker kann man Container ganz einfach erstellen, starten oder verwalten. En
 Die Anwendung bleibt dabei immer isoliert von anderen Containern und dem Host-System. 
 Beispiel: Jeder Container ist wie eine Wohnung in einem Hochhaus. Einzelne Einheiten, aber die gleiche Infrastruktur.
 
+
+![docker](https://raw.githubusercontent.com/ascdata/ascdata.github.io/refs/heads/master/_posts/media/docker_prozess.png)
+
 ## Die wichtigsten Bausteine von Docker
 Damit du verstehst, wie Docker unter der Haube funktioniert, schauen wir uns die Kernbestandteile an.
 
