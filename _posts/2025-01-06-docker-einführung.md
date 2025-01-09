@@ -1,3 +1,5 @@
+![docker](https://raw.githubusercontent.com/ascdata/ascdata.github.io/refs/heads/master/_posts/media/docker.jpg)
+
 ## Was ist Docker?
 Docker ist ein Open-Source-Tool, mit dem Entwickler Anwendungen in Containern erstellen und betreiben können. 
 Container sind kleine, isolierte Umgebungen, die alles enthalten was eine Anwendung braucht um zu laufen. 
