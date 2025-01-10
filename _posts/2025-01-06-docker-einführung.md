@@ -23,7 +23,6 @@ Beispiel: Jeder Container ist wie eine Wohnung in einem Hochhaus. Einzelne Einhe
 ![docker-prozess](https://raw.githubusercontent.com/ascdata/ascdata.github.io/refs/heads/master/_posts/media/docker_prozess.png)
 
 ## Die wichtigsten Bausteine von Docker
-Damit du verstehst, wie Docker unter der Haube funktioniert, schauen wir uns die Kernbestandteile an.
 
 ### 1. Docker-Container
 Container sind der Kern von Docker. 
