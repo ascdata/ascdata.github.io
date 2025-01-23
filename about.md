@@ -15,7 +15,7 @@ Mein beruflicher Weg begann in der IT-Infrastruktur, wo ich über sechs Jahre Er
 Abseits von Daten und Technik verbringe ich Zeit mit meiner Frau und meinem kleinen Sohn. Ich treibe gerne Sport, spiele E-Gitarre, lese inspirierende Bücher, schreibe oder entspanne mich gelegentlich bei Videospielen.
 
 Diese Bücher kann ich besonders empfehlen (die ersten beiden sind wie meine tägliche Bibel):
-- [Ryan Holiday, Stephen Hanselman - The Daily Stoic: 366 Meditations on Wisdom, Perseverance, and the Art of Living](https://www.goodreads.com/book/show/29093292-the-daily-stoic?ref=nav_sb_ss_1_14)
+- [Ryan Holiday - The Daily Stoic: 366 Meditations on Wisdom, Perseverance, and the Art of Living](https://www.goodreads.com/book/show/29093292-the-daily-stoic?ref=nav_sb_ss_1_14)
 - [Ryan Holiday - The Daily Dad: 366 Meditations on Parenting, Love and Raising Great Kids](https://www.goodreads.com/book/show/61992094-the-daily-dad?ref=nav_sb_ss_1_13)
 - [Joe Reis, Matt Housley - Fundamentals of Data Engineering: Plan and Build Robust Data Systems](https://www.goodreads.com/book/show/61218623-fundamentals-of-data-engineering)
 - [Dale Carnegie - How to Win Friends and Influence People](https://www.goodreads.com/book/show/4865.How_to_Win_Friends_and_Influence_People)
