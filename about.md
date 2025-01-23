@@ -24,3 +24,5 @@ Diese Bücher kann ich besonders empfehlen (die ersten beiden sind wie meine tä
 - [Flavio Simonetti - All in](https://www.goodreads.com/book/show/44140863-all-in?ref=nav_sb_ss_1_16)
 - [John Sonmez - Soft Skills: The software developer's life manual](https://www.abebooks.de/9781617292392/Soft-Skills-software-developers-life-1617292397/plp)
 - [Brian Tracy - Eat That Frog!](https://www.goodreads.com/book/show/32471928-eat-that-frog-action-workbook?ref=nav_sb_ss_2_13)
+- [Yuval Noah Harari - Eine kurze Geschichte der Menschheit](https://www.goodreads.com/book/show/32486154-eine-kurze-geschichte-der-menschheit)
+- [Tim Marshall - Die Macht der Geographie: Wie sich Weltpolitik anhand von 10 Karten erklären lässt](https://www.goodreads.com/book/show/35996720-die-macht-der-geographie)
