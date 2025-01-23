@@ -5,8 +5,6 @@ layout: post
 categories: media
 ---
 
-# **Brickwise: Webscraping auf Immobilienscout24.de**
-
 **Brickwise** ist mein persönliches Projekt mit dem Ziel eine Plattform zur Sammlung, Speicherung und Analyse von Immobiliendaten zu erstellen. 
 Dazu nutze ich **Web Scraping** mit Scrapy, um Daten von [Immobilienscout24.de](https://www.immobilienscout24.de/) zu sammeln.  
 Diese werden entsprechend transformiert, in einer **PostgreSQL-Datenbank** gespeichert und anschließend mit **Apache Superset** zu interaktiven Dashboards visualisiert.
