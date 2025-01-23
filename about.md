@@ -4,7 +4,7 @@ permalink: "/about/"
 layout: page
 ---
 
-<img src="https://github.com/ascdata/ascdata.github.io/blob/master/assets/pictures/me.jpg"/>
+![me](https://raw.githubusercontent.com/ascdata/ascdata.github.io/refs/heads/master/assets/pictures/me.jpg)
 
 Ich bin Daten-Enthusiast und begeistert davon, Informationen aus unterschiedlichsten Quellen sichtbar und verständlich zu machen. Dafür nutze ich verschiedene Tools zur Extraktion, Transformation und Visualisierung von Daten.
 Besonders fasziniert mich das Web Scraping, mit dem ich wertvolle Erkenntnisse aus komplexen Datensätzen gewinne.
