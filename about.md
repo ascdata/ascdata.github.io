@@ -6,8 +6,8 @@ layout: page
 
 ![me](https://raw.githubusercontent.com/ascdata/ascdata.github.io/refs/heads/master/assets/pictures/me.jpg)
 
-Ich bin Daten-Enthusiast und begeistert davon, Informationen aus unterschiedlichsten Quellen sichtbar und verständlich zu machen. Dafür nutze ich verschiedene Tools zur Extraktion, Transformation und Visualisierung von Daten.
-Besonders fasziniert mich das Web Scraping, mit dem ich wertvolle Erkenntnisse aus komplexen Datensätzen gewinne.
+Ich bin Daten-Enthusiast und begeistert davon Informationen aus unterschiedlichsten Quellen sichtbar und verständlich zu machen. Dafür nutze ich verschiedene Tools zur Extraktion, Transformation und Visualisierung von Daten. Besonders fasziniert mich wie Digitalisierung Unternehmen transformieren kann, indem sie datengetriebene Entscheidungen ermöglicht und Prozesse effizienter gestaltet.\
+Mein Ziel ist es nicht nur technologische Lösungen zu entwickeln, sondern auch strategisch zu denken – Datenarchitekturen zu gestalten und eine nachhaltige Datenkultur aufzubauen. Ich sehe es als meine Aufgabe, die Brücke zwischen Technik und Unternehmensstrategie zu schlagen und Digitalisierungsprozesse aktiv voranzutreiben.
 
 Mein beruflicher Weg begann in der IT-Infrastruktur, wo ich über sechs Jahre Erfahrung gesammelt habe. Seit mehr als drei Jahren arbeite ich im Data-Bereich und fokussiere mich auf datengetriebene Lösungen, insbesondere im Bereich Business Intelligence. Python, Datenbanken und Containerisierung zählen zu meinen Lieblingsthemen, vor allem wenn sie technisch anspruchsvoll und elegant umgesetzt sind.
 
