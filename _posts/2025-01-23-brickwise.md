@@ -1,15 +1,39 @@
 ---
-title:  "Brickwise: Webscraping auf Immobilienscout24.de"
+title: "Einführung in Web Scraping – Praxisbeispiel mit Scrapy"
 mathjax: true
 layout: post
-categories: media
+categories: tech
 ---
 
-**Brickwise** ist mein persönliches Projekt mit dem Ziel eine Plattform zur Sammlung, Speicherung und Analyse von Immobiliendaten zu erstellen. 
-Dazu nutze ich **Web Scraping** mit Scrapy, um Daten von [Immobilienscout24.de](https://www.immobilienscout24.de/) zu sammeln.  
-Diese werden entsprechend transformiert, in einer **PostgreSQL-Datenbank** gespeichert und anschließend mit **Apache Superset** zu interaktiven Dashboards visualisiert.
+## Was ist Web Scraping?
+
+Web Scraping ist eine Technik zur automatisierten Extraktion von Daten aus Webseiten. Dabei wird der HTML-Code einer Seite analysiert, um gezielt Informationen zu extrahieren. Dies geschieht häufig mit Bibliotheken oder Frameworks, die HTTP-Anfragen senden und anschließend die Antwort auswerten. Typische Anwendungsfälle sind Preisvergleiche, Marktanalysen oder Datensammlungen für eigene Projekte.
+
+In diesem Post wird anhand eines Praxisbeispiels gezeigt, wie Web Scraping mit **Scrapy**, einer Python-Bibliothek für Web Scraping, funktioniert. Als Beispiel dient die Extraktion von Immobilienangeboten von [Immobilienscout24.de](https://www.immobilienscout24.de/).
 
 ---
+
+## Architektur eines Scraping-Projekts
+
+![brickwise_architektur.jpg](https://raw.githubusercontent.com/ascdata/ascdata.github.io/refs/heads/master/_posts/media/brickwise_architektur.jpg)
+
+Ein Web Scraping-Projekt benötigt in der Regel eine Infrastruktur, um die gesammelten Daten zu speichern und auszuwerten. In diesem Beispiel besteht das Projekt aus drei Komponenten:
+
+- **Web Scraper**: Ein Scrapy Spider ruft die Website auf, analysiert die HTML-Struktur und extrahiert relevante Informationen wie Preise und Titel.
+- **Datenbank**: Die gesammelten Daten werden in einer **PostgreSQL-Datenbank** gespeichert.
+- **Datenvisualisierung**: Mit **Apache Superset** werden die Daten analysiert und in Dashboards dargestellt.
+
+Das Ziel ist es, automatisiert Immobilienangebote zu sammeln, in einer strukturierten Form abzulegen und anschließend visuell auszuwerten.
+
+---
+
+## Grundlagen von Scrapy
+
+Scrapy ist ein leistungsfähiges Python-Framework für Web Scraping. Es sendet HTTP-Anfragen an Webseiten, analysiert den HTML-Code und speichert relevante Informationen. Scrapy bietet viele Funktionen, darunter:
+
+- **Asynchrones Crawling** für schnelle Datenextraktion
+- **Selektoren** zum Finden von Elementen in HTML-Seiten
+- **Middleware** zur Anpassung von Headern oder Cookies
 
 ## Überblick über die Architektur
 
@@ -65,10 +89,11 @@ Ein neues Scrapy-Projekt wird mit dem folgenden Befehl erstellt:
 ```bash
 scrapy startproject scrapy_brickwise
 ```
+Viele Webseiten setzen Mechanismen ein, um automatisierte Anfragen zu blockieren. Dies kann sich durch IP-Blocking oder das Erkennen von Web Crawlers äußern. Das kann umgangen werden, indem man dem Spider User-Agent-Informationen zuteilt; also Informationen wie anfragender Browser, Betriebssystem etc..
 
 Die Datei settings.py im Scrapy-Projekt sollte angepasst werden, um den User-Agent und die Cookies zu konfigurieren.
 Ich habe festgestellt, dass Seiten wie [Immobilienscout24.de](https://www.immobilienscout24.de/) Scrapy Spiders als [Webcrawler](https://de.wikipedia.org/wiki/Webcrawler) erkennen.
-Dies kann umgangen werden, indem man dem Spider User-Agent-Informationen zuteilt; also Informationen wie anfragender Browser, Betriebssystem etc..
+
 
 Beispiel:
 ```python
@@ -98,6 +123,8 @@ def start_requests(self):
             "seastate": "xxx",
         }
 ```
+
+---
 
 ### Docker
 
@@ -161,6 +188,10 @@ Apache Superset wird konfiguriert, um auf die PostgreSQL-Datenbank zuzugreifen. 
 postgresql+psycopg2://admin:admin@localhost:5432/brickwise
 ```
 
+---
+
+### Crawling
+
 Um Daten zu scrapen, wird der Scrapy Spider wie folgt gestartet:
 ```bash
 scrapy crawl immoscout
@@ -185,7 +216,18 @@ def parse(self, response):
         else:
             self.log("Fehler: Zugriff verweigert.")
 ```
+Hierbei:
+
+- Durchläuft der Spider alle Immobilienanzeigen auf der Seite
+- Extrahiert Titel und Preise aus dem HTML-Code
+- Gibt die Daten in strukturierter Form zurück
+
 Es wird anhand des Response-Codes 200 geprüft, ob ein Zugriff über den Spider grundsätzlich erfolgreich war und eine entsprechende Meldung wird zurück gegeben.
 Die Werte die gecrawl werden sollen, können am einfachsten über die Entwicklertools des Browsers identifiziert werden (F12 im Browser).
 
 ![entiwcklertools.png](https://raw.githubusercontent.com/ascdata/ascdata.github.io/refs/heads/master/_posts/media/entiwcklertools.png)
+
+### Fazit
+Web Scraping ist eine leistungsstarke Technik zur Extraktion von Daten aus Webseiten. In diesem Beispiel wurde gezeigt, wie Scrapy genutzt wird, um Immobilienangebote zu sammeln. Die gesammelten Daten lassen sich anschließend mit Tools wie z.B.  Apache Superset visuell auswerten.
+
+Web Scraping ist in vielen Bereichen nützlich, von Marktanalysen über Wettbewerbsbeobachtung bis hin zu Preisvergleichen, Trendanalysen, wissenschaftlicher Forschung und der Automatisierung von Geschäftsprozessen. Wichtig ist dabei, stets die rechtlichen Rahmenbedingungen zu beachten, da nicht alle Webseiten das automatisierte Abrufen von Daten erlauben.
