@@ -13,20 +13,6 @@ In diesem Post wird anhand eines Praxisbeispiels gezeigt, wie Web Scraping mit *
 
 ---
 
-## Architektur eines Scraping-Projekts
-
-![brickwise_architektur.jpg](https://raw.githubusercontent.com/ascdata/ascdata.github.io/refs/heads/master/_posts/media/brickwise_architektur.jpg)
-
-Ein Web Scraping-Projekt benötigt in der Regel eine Infrastruktur, um die gesammelten Daten zu speichern und auszuwerten. In diesem Beispiel besteht das Projekt aus drei Komponenten:
-
-- **Web Scraper**: Ein Scrapy Spider ruft die Website auf, analysiert die HTML-Struktur und extrahiert relevante Informationen wie Preise und Titel.
-- **Datenbank**: Die gesammelten Daten werden in einer **PostgreSQL-Datenbank** gespeichert.
-- **Datenvisualisierung**: Mit **Apache Superset** werden die Daten analysiert und in Dashboards dargestellt.
-
-Das Ziel ist es, automatisiert Immobilienangebote zu sammeln, in einer strukturierten Form abzulegen und anschließend visuell auszuwerten.
-
----
-
 ## Grundlagen von Scrapy
 
 Scrapy ist ein leistungsfähiges Python-Framework für Web Scraping. Es sendet HTTP-Anfragen an Webseiten, analysiert den HTML-Code und speichert relevante Informationen. Scrapy bietet viele Funktionen, darunter:
@@ -51,10 +37,6 @@ Das Projekt besteht aus den folgenden Komponenten:
   - Hostet die PostgreSQL-Datenbank für die Datenspeicherung.
   - Hostet **Apache Superset** für die Analyse und Visualisierung.
 
-### **Datenfluss**
-1. **Scrapy Spider** sammelt Daten.
-2. Daten werden über **psycopg2** in **PostgreSQL** geschrieben.
-3. **Apache Superset** greift auf die PostgreSQL-Datenbank zu und erstellt Dashboards.
 
 ---
 
@@ -126,7 +108,7 @@ def start_requests(self):
 
 ---
 
-### Docker
+## Docker
 
 Auf der Docker-VM wird eine docker-compose.yml erstellt, um die PostgreSQL-Datenbank und Apache Superset zu konfigurieren:
 
