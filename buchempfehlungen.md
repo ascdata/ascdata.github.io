@@ -1,5 +1,3 @@
-# 📖 Buchempfehlungen
-
 ### 🧠 Mindset
 
 - [**The Daily Stoic** – Ryan Holiday](https://www.goodreads.com/book/show/29093292-the-daily-stoic)  
