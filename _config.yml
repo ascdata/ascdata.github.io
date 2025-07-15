@@ -18,6 +18,7 @@ minimal: false             # use a dark header
 navigation:                # accepts {file, title, url, icon, sidebaricon}
   - {title: Blog, icon: book, file: "index.html"}
   - {title: Über mich, icon: address-card, file: "about.md"}
+  - {title: Buchempfehlungen, icon: book, file: "buchempfehlungen.md"}
   - {title: GitHub, icon: github, url: "https://github.com/ascdata"}
   - {title: LinkedIn, icon: linkedin, url: "https://www.linkedin.com/in/alexander-schaudin/"}
   - {title: Buy Me a Coffee, icon: mug-hot, url: "https://buymeacoffee.com/dataimpact"}
