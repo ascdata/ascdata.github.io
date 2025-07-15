@@ -1,4 +1,8 @@
-# 📖 Buchempfehlungen
+---
+title: "📖 Buchempfehlungen"
+permalink: "/buchempfehlungen/"
+layout: page
+---
 
 Einige Bücher, die ich gelesen habe und hilfreich fand. Ohne Reihenfolge, in groben Kategorien.
 
