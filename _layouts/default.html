@@ -34,12 +34,12 @@
 
 {{ content }}
 
+{% if site.external %}
 <footer>
   <div>{{ site.description | default: site.title }}</div>
-  <p>
-    <a href="{{ '/impressum/' | relative_url }}">Impressum</a> · 
-    <a href="{{ '/datenschutz/' | relative_url }}">Datenschutzerklärung</a>
-  </p>
+  {% include menu.html menu=site.external %}
 </footer>
+{% endif %}
+
 
 </html>
