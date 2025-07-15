@@ -17,7 +17,6 @@
 
 ### 💻 Technik
 
-
 - [**Fundamentals of Data Engineering** – Joe Reis & Matt Housley](https://www.goodreads.com/book/show/61218623-fundamentals-of-data-engineering)  
   *Modernes Data Engineering von Konzept bis Praxis*
 - [**Soft Skills: The Software Developer's Life Manual** – John Sonmez](https://www.abebooks.de/9781617292392/Soft-Skills-software-developers-life-1617292397/plp)  
@@ -29,3 +28,9 @@
 
 - [**Die Macht der Geographie** – Tim Marshall](https://www.goodreads.com/book/show/35996720-die-macht-der-geographie)  
   *Wie Geografie Weltpolitik prägt*
+
+### 📚 Sachbücher
+
+- [**Babyjahre** – Remo H. Largo](https://www.goodreads.com/book/show/859451.Babyjahre)  
+  *Ein Standardwerk zur frühkindlichen Entwicklung*
+
