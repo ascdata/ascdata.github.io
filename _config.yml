@@ -23,7 +23,7 @@ navigation:                # accepts {file, title, url, icon, sidebaricon}
   - {title: LinkedIn, icon: linkedin, url: "https://www.linkedin.com/in/alexander-schaudin/"}
   - {title: Buy Me a Coffee, icon: mug-hot, url: "https://buymeacoffee.com/dataimpact"}
   - {title: Impressum, icon: address-card, file: "impressum.md"}
-  - {title: Datenschutzerklärung, icon: scale-balanced, file: "datenschutzerklärung.md"}
+  - {title: Datenschutzerklärung, icon: section, file: "datenschutzerklärung.md"}
 
 external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
   #- {title: Impressum, icon: address-card, file: "impressum.md"}
