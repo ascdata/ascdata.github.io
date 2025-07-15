@@ -22,6 +22,8 @@ Einige Bücher, die ich gelesen habe und hilfreich fand. Ohne Reihenfolge, in gr
   *Über Disziplin, Klarheit und Verantwortung*
 - [**Eat That Frog!** – Brian Tracy](https://www.goodreads.com/book/show/32471928-eat-that-frog-action-workbook)  
   *Prioritäten setzen und das Wichtigste zuerst erledigen*
+- [**Die Kunst des Krieges** – Sunzi](https://www.goodreads.com/book/show/2301495.Die_Kunst_des_Krieges?ref=nav_sb_ss_1_17)  
+  *Klassisches Werk über Strategie und Konfliktführung*
 
 ### 💻 Technik
 
@@ -55,3 +57,14 @@ Einige Bücher, die ich gelesen habe und hilfreich fand. Ohne Reihenfolge, in gr
   *Klassiker für wirtschaftliches Grundverständnis*
 - [**Projektmanagement: Methoden, Techniken, Tools** – Klaus Olfert](https://www.goodreads.com/book/show/19234659-projektmanagement)  
   *Strukturiertes Handbuch für klassische und moderne Projektmanagementmethoden*
+
+### 🎭 Belletristik
+
+- [**Der Herr der Ringe** (Illustriert vom Autor) – J.R.R. Tolkien](https://www.goodreads.com/book/show/59523267-der-herr-der-ringe-mit-illustrationen-des-autors?from_search=true&from_srp=true&qid=aLWbkEvZrN&rank=1)  
+  *Episches Meisterwerk – moralische Dilemmata, epische Kämpfe, tiefes Mitgefühl und das Ringen um Hoffnung*
+- [**Der kleine Hobbit** – J.R.R. Tolkien](https://www.goodreads.com/book/show/74369.Der_kleine_Hobbit?ref=nav_sb_ss_1_17)  
+  *Klassiker über Abenteuer, Freundschaft und Heldentum in einer liebevoll ausgestalteten Fantasiewelt*
+- [**The Witcher** – Andrzej Sapkowski](https://www.thalia.de/shop/home/artikeldetails/A1058480205)  
+  *Atmosphärisch dichte Fantasy-Welt voller moralischer Grauzonen, politischer Intrigen, intensiver Kämpfe und leiser Romantik*
+- [**Grim Begins** – Wiktor Miesok & Felix Charin](https://www.goodreads.com/book/show/234065022-grim-begins?from_search=true&from_srp=true&qid=PlSeZNfsyl&rank=1)  
+  *Gnadenloser Crime-Thriller zur Zeit des eisernen Vorhangs – zwischen Macht, Ehre und Überleben*
