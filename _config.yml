@@ -16,7 +16,7 @@ minimal: false             # use a dark header
 # Menu
 
 navigation:                # accepts {file, title, url, icon, sidebaricon}
-  - {title: Blog, icon: book, file: "index.html"}
+  - {title: Blog, icon: newspaper, file: "index.html"}
   - {title: Über mich, icon: address-card, file: "about.md"}
   - {title: Buchempfehlungen, icon: book, file: "buchempfehlungen.md"}
   - {title: GitHub, icon: github, url: "https://github.com/ascdata"}
