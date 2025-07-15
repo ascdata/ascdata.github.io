@@ -35,7 +35,3 @@ comments:
 
 plugins:
  - jekyll-feed
-
-footer:
-  - title: "Impressum"
-    file: "impressum.md"
