@@ -40,7 +40,7 @@ Einige Bücher, die ich gelesen habe und hilfreich fand. Ohne Reihenfolge, in gr
 - [**Wirtschaftsinformatik: Eine Einführung** – Reinhold Rapp](https://books.google.de/books/about/Wirtschaftsinformatik.html?id=reNqnvBoJ2oC&redir_esc=y)  
   *Schneller Einstieg in die Grundlagen der Wirtschaftsinformatik*
 
- ### 🌍 Gesellschaft
+### 🌍 Gesellschaft
 
 - [**Eine kurze Geschichte der Menschheit** – Yuval Noah Harari](https://www.goodreads.com/book/show/32486154-eine-kurze-geschichte-der-menschheit)  
   *Historischer Überblick über die Entwicklung des Homo Sapiens*
@@ -55,4 +55,3 @@ Einige Bücher, die ich gelesen habe und hilfreich fand. Ohne Reihenfolge, in gr
   *Klassiker für wirtschaftliches Grundverständnis*
 - [**Projektmanagement: Methoden, Techniken, Tools** – Klaus Olfert](https://www.goodreads.com/book/show/19234659-projektmanagement)  
   *Strukturiertes Handbuch für klassische und moderne Projektmanagementmethoden*
-
