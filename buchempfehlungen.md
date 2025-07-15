@@ -35,9 +35,9 @@ Einige Bücher, die ich gelesen habe und hilfreich fand. Ohne Reihenfolge, in gr
   *Schneller Einstieg in die Grundlagen der Wirtschaftsinformatik*
 
  ### 🌍 Gesellschaft
- - [**Eine kurze Geschichte der Menschheit** – Yuval Noah Harari](https://www.goodreads.com/book/show/32486154-eine-kurze-geschichte-der-menschheit)  
-  *Historischer Überblick über die Entwicklung des Homo Sapiens*
 
+- [**Eine kurze Geschichte der Menschheit** – Yuval Noah Harari](https://www.goodreads.com/book/show/32486154-eine-kurze-geschichte-der-menschheit)  
+  *Historischer Überblick über die Entwicklung des Homo Sapiens*
 - [**Die Macht der Geographie** – Tim Marshall](https://www.goodreads.com/book/show/35996720-die-macht-der-geographie)  
   *Wie Geografie Weltpolitik prägt*
 
