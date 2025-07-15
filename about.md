@@ -6,7 +6,7 @@ layout: page
 
 ![me](https://raw.githubusercontent.com/ascdata/ascdata.github.io/refs/heads/master/assets/pictures/me.jpg)
 
-Ich bin Daten-Enthusiast und begeistert davon Informationen aus unterschiedlichsten Quellen sichtbar und verständlich zu machen. Besonders faszinieren mich die Softwareentwicklung, Datenbanksysteme und die Zusammenarbeit mit Menschen, die für das gleiche Thema brennen. \
+Ich bin Data Engineer und begeistert davon Informationen aus unterschiedlichsten Quellen sichtbar und verständlich zu machen. Besonders faszinieren mich die Softwareentwicklung, Datenbanksysteme und die Zusammenarbeit mit Menschen, die für das gleiche Thema brennen. \
 Mein Ziel ist es nicht nur Softwarelösungen zu entwickeln, sondern auch strategisch zu denken und eine nachhaltige Datenkultur aufzubauen. Ich sehe es als meine Aufgabe, die Brücke zwischen Technik und Unternehmensstrategie zu schlagen und Digitalisierungsprozesse aktiv voranzutreiben.
 
 Mein beruflicher Weg begann in der IT-Infrastruktur, wo ich über sechs Jahre Erfahrung gesammelt habe. Seit mehr als drei Jahren arbeite ich im Data-Bereich und fokussiere mich auf datengetriebene Lösungen im Bereich Business Intelligence.
