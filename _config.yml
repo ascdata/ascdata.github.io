@@ -20,7 +20,7 @@ navigation:                # accepts {file, title, url, icon, sidebaricon}
   - {title: Über mich, icon: address-card, file: "about.md"}
   - {title: Github, icon: github, url: "https://github.com/ascdata"}
   - {title: LinkedIn, icon: linkedin, url: "https://www.linkedin.com/in/alexander-schaudin/"}
-  - {title: DataTalks, icon: mug-hot, url: "https://datatalks.club/"}
+  - {title: BuyMeACoffee, icon: mug-hot, url: "https://buymeacoffee.com/dataimpact"}
 
 external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
   # - {title: Mail, icon: envelope, url: "mailto:niklasbuschmann@users.noreply.github.com"}
