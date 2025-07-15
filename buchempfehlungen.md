@@ -21,6 +21,16 @@
   *Modernes Data Engineering von Konzept bis Praxis*
 - [**Soft Skills: The Software Developer's Life Manual** – John Sonmez](https://www.abebooks.de/9781617292392/Soft-Skills-software-developers-life-1617292397/plp)  
   *Karriereratgeber für Entwickler*
+- [**Die Oracle Datenbank 19c: Eine Einführung für DBAs** – Thorsten Grebe](https://www.goodreads.com/book/show/60403033-die-oracle-datenbank-19c)  
+  *Handbuch zur Administration von Oracle DB 19c: Installation, Betrieb, Backup & Recovery*
+- [**Oracle DBA Mentor** – Christian Pfeifer](https://www.goodreads.com/book/show/44739894-oracle-dba-mentor)  
+  *Praxisorientierte Tipps und Erfahrungen aus dem Alltag eines Oracle-DBAs*
+- [**Einstieg in SQL** – Markus Winand](https://www.goodreads.com/book/show/54247272-einstieg-in-sql)  
+  *Leicht verständliche Einführung in SQL*
+- [**Handbuch IT-Systemmanagement** – Horst Günther](https://www.goodreads.com/book/show/32470950-handbuch-it-systemmanagement)  
+  *IT-Betrieb, Prozesse und Management in komplexen Systemlandschaften*
+- [**Wirtschaftsinformatik: Eine Einführung** – Reinhold Rapp](https://books.google.de/books/about/Wirtschaftsinformatik.html?id=reNqnvBoJ2oC&redir_esc=y)  
+  *Schneller Einstieg in die Grundlagen der Wirtschaftsinformatik*
 
  ### 🌍 Gesellschaft
  - [**Eine kurze Geschichte der Menschheit** – Yuval Noah Harari](https://www.goodreads.com/book/show/32486154-eine-kurze-geschichte-der-menschheit)  
@@ -32,5 +42,9 @@
 ### 📚 Sachbücher
 
 - [**Babyjahre** – Remo H. Largo](https://www.goodreads.com/book/show/859451.Babyjahre)  
-  *Ein Standardwerk zur frühkindlichen Entwicklung*
+  *Standardwerk zur frühkindlichen Entwicklung*
+- [**Einführung in die Allgemeine Betriebswirtschaftslehre** – Günter Wöhe](https://www.goodreads.com/book/show/2064362.Einf_hrung_in_die_Allgemeine_Betriebswirtschaftslehre)  
+  *Klassiker für wirtschaftliches Grundverständnis*
+- [**Projektmanagement: Methoden, Techniken, Tools** – Klaus Olfert](https://www.goodreads.com/book/show/19234659-projektmanagement)  
+  *Strukturiertes Handbuch für klassische und moderne Projektmanagementmethoden*
 
