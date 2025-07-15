@@ -17,13 +17,13 @@ minimal: false             # use a dark header
 
 navigation:                # accepts {file, title, url, icon, sidebaricon}
   - {title: Blog, icon: newspaper, file: "index.html"}
-  - {title: Über mich, icon: address-card, file: "about.md"}
+  - {title: Über mich, icon: user, file: "about.md"}
   - {title: Buchempfehlungen, icon: book, file: "buchempfehlungen.md"}
   - {title: GitHub, icon: github, url: "https://github.com/ascdata"}
   - {title: LinkedIn, icon: linkedin, url: "https://www.linkedin.com/in/alexander-schaudin/"}
   - {title: Buy Me a Coffee, icon: mug-hot, url: "https://buymeacoffee.com/dataimpact"}
   - {title: Impressum, icon: address-card, file: "impressum.md"}
-  - {title: Datenschutzerklärung, icon: address-card, file: "datenschutzerklärung.md"}
+  - {title: Datenschutzerklärung, icon: scale-balanced, file: "datenschutzerklärung.md"}
 
 external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
   #- {title: Impressum, icon: address-card, file: "impressum.md"}
