@@ -9,7 +9,7 @@ Einige Bücher, die ich gelesen habe und hilfreich fand. Ohne Reihenfolge, in gr
 ### 🧠 Mindset
 
 - [**The Daily Stoic** – Ryan Holiday](https://www.goodreads.com/book/show/29093292-the-daily-stoic)  
-  *366 Meditationen über Weisheit, Ausdauer und das Leben*
+  *Meditationen über Weisheit, Ausdauer und das Leben*
 - [**The Daily Dad** – Ryan Holiday](https://www.goodreads.com/book/show/61992094-the-daily-dad)  
   *Impulse für Vaterschaft, Liebe und Erziehung*
 - [**How to Win Friends and Influence People** – Dale Carnegie](https://www.goodreads.com/book/show/4865.How_to_Win_Friends_and_Influence_People)  
