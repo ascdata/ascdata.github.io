@@ -12,7 +12,7 @@ Mein Ziel ist es nicht nur Softwarelösungen zu entwickeln, sondern auch strateg
 Mein beruflicher Weg begann in der IT-Infrastruktur, wo ich über sechs Jahre Erfahrung gesammelt habe. Seit mehr als drei Jahren arbeite ich im Data-Bereich und fokussiere mich auf datengetriebene Lösungen im Bereich Business Intelligence.
 
 ## Persönliches
-Abseits von Daten und Technik verbringe ich gerne viel Zeit mit meiner Familie. Ich treibe viel Sport, spiele E-Gitarre und besuche gerne Konzerte. Außerdem lese ich täglich Bücher, die mir neue Perspektiven eröffnen und mich auf meinem Weg begleiten. Einige Werke haben mich nicht nur inspiriert, sondern auch nachhaltig beeinflusst.
+Abseits von Daten und Technik verbringe ich gerne Zeit mit meiner Familie. Ich treibe viel Sport, spiele E-Gitarre und besuche gerne Konzerte. Außerdem lese ich täglich Bücher, die mir neue Perspektiven eröffnen. Einige Werke haben mich nicht nur inspiriert, sondern auch nachhaltig beeinflusst.
 
 Die folgenden Empfehlungen geben einen Einblick in das, was mich fachlich und persönlich bewegt:
 
