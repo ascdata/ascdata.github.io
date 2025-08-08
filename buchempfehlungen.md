@@ -68,3 +68,5 @@ Einige Bücher, die ich gelesen habe und hilfreich fand. Ohne Reihenfolge, in gr
   *Atmosphärisch dichte Fantasy-Welt voller moralischer Grauzonen, politischer Intrigen, intensiver Kämpfe und leiser Romantik*
 - [**Grim Begins** – Wiktor Miesok & Felix Charin](https://www.goodreads.com/book/show/234065022-grim-begins?from_search=true&from_srp=true&qid=PlSeZNfsyl&rank=1)  
   *Gnadenloser Crime-Thriller zur Zeit des eisernen Vorhangs – zwischen Macht, Ehre und Überleben*
+- [**Am Ende aller Zeiten** – Adrian Walker](https://www.goodreads.com/book/show/32396013-am-ende-aller-zeiten)  
+  *Endzeitroman über einen Vater, der durch ein zerfallenes Land reist, um seinen letzten Wunsch zu erfüllen.*
