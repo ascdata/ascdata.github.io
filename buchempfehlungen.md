@@ -50,7 +50,6 @@ Einige Bücher, die ich gelesen habe und hilfreich fand. Ohne Reihenfolge, in gr
   *Wie Geografie Weltpolitik prägt*
 - [**Wenn Russland gewinnt: Ein Szenario** - Carlo Masala](https://www.goodreads.com/book/show/230791515-wenn-russland-gewinnt)   
   *Ein interessantes, fiktives Szenario, das beschreibt, wie ein Sieg Russlands den geopolitischen Konflikt mit der NATO verändern könnte.*
-
   👉[Buchrezension](https://dataimpact.dev/wenn-russland-gewinnt/)
 
 ### 📚 Sachbücher
