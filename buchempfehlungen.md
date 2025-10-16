@@ -48,6 +48,8 @@ Einige Bücher, die ich gelesen habe und hilfreich fand. Ohne Reihenfolge, in gr
   *Historischer Überblick über die Entwicklung des Homo Sapiens*
 - [**Die Macht der Geographie** – Tim Marshall](https://www.goodreads.com/book/show/35996720-die-macht-der-geographie)  
   *Wie Geografie Weltpolitik prägt*
+- [**Wenn Russland gewinnt: Ein Szenario](https://www.goodreads.com/book/show/230791515-wenn-russland-gewinnt)   
+  *Ein interessantes, fiktives Szenario, das beschreibt, wie ein Sieg Russlands den geopolitischen Konflikt mit der NATO verändern könnte.*
 
 ### 📚 Sachbücher
 
