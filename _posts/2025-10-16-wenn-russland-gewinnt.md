@@ -31,3 +31,5 @@ Wenn ich das Buch lese, bleibt dieses Gefühl: Wir können uns nicht einfach kom
 Goldene Zeiten hatten wir. Aber wir haben nicht strategisch in die Zukunft geblickt. Wir haben uns auf andere verlassen und blind geglaubt, bei uns bleibt alles automatisch gut, selbst wenn wir nichts tun. 
 Masala zeigt, dass das ein Trugschluss ist. Frieden ist keine Selbstverständlichkeit. Er braucht Vorbereitung, Verantwortung und die Bereitschaft zu handeln, bevor der Ernstfall eintritt.
 Für mich ist das der Kern des Buches: Unsere politische Bequemlichkeit ist ein Problem. Wer glaubt, dass Sicherheit einfach da ist, wenn man nichts tut, wird irgendwann bitter enttäuscht.
+
+[**Wenn Russland gewinnt: Ein Szenario** - Carlo Masala](https://www.goodreads.com/book/show/230791515-wenn-russland-gewinnt)
