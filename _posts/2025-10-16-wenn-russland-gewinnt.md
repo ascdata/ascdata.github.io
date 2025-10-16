@@ -4,9 +4,6 @@ mathjax: true
 layout: post
 categories: buch
 ---
-
-# Wenn Russland gewinnt: Ein Szenario – Buchrezension und Gedanken zur europäischen Sicherheit
-
 Carlo Masalas Buch "Wenn Russland gewinnt: Ein Szenario" liest sich wie eine Mischung aus Analyse und Roman. Es ist fiktiv, aber erschreckend real. 
 Masala entwirft ein Szenario im Jahr 2028, in dem Russland einen Angriff auf das NATO-Mitglied Estland wagt. Keine totale Invasion, sondern ein begrenzter, taktisch kluger Vorstoß, welcher den Artikel 5 der NATO austesten soll. 
 Artikel 5 des NATO-Vertrags ist der sogenannte Bündnisfall, der besagt, dass ein bewaffneter Angriff auf einen NATO-Mitgliedsstaat als Angriff auf alle Bündnispartner gilt.
